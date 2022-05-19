@@ -1,6 +1,6 @@
 ## Space pirate: Going Deeper
 
-This task was really interesting, because many struggled with this containing me for 2-3 days to understand it. And the trick was simple but elegant :D 
+This pwn task was really interesting, because many struggled with this containing me for 2-3 days to understand it. And the trick was simple but elegant :D 
 So first of all we are downloading the task files, which contain sp_going_deeper ELF x86_64 executable, glibc library for the executable to load some external functions and flag.txt (HTB{f4k3_fl4g_4_t35t1ng}).  
 
 First we are going to connect to the remote host to understand what suprises wait for us. 
@@ -18,9 +18,18 @@ And we got 3 options.
 2. Login
 3. Exit 
 
-We totally don't want to exit, so we will go ahread with the first two. 
+We totally don't want to exit, so we will go ahread with the first two.  
 <img width="354" alt="Screen Shot 2022-05-17 at 15 42 55" src="https://user-images.githubusercontent.com/24619999/169315995-5c9bd182-b35f-498f-a76a-01407652e74c.png">
 
+First option gives us "Input" prompt, and the second option gives us "Login" prompt, as the answer for all the inputs there was "Authentication failed!" output and connection was terminated.
+
+So to understand the executable more deeper, we should analyze it and see what is contains. 
+We can use **strings** command to see human readable strings in the executable.
+```
+$ strings <filename>
+```
+For out file:  
+ <img width="390" alt="Screen Shot 2022-05-17 at 15 43 18" src="https://user-images.githubusercontent.com/24619999/169318761-ef0056cf-2269-4f95-b4d5-dc2f46e5e096.png">
 
 You can use the [editor on GitHub](https://github.com/PizzaPablo666/Writeups-CyberApo22/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
