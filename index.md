@@ -52,6 +52,14 @@ At first sight when we input the __**STRING**__, it should work and give us the 
   
 <img width="682" alt="Screen Shot 2022-05-17 at 15 45 20" src="https://user-images.githubusercontent.com/24619999/169328802-f223731c-5de6-468e-9da0-f1d810ec6075.png">
 
+The above code does the same as the admin_panel's that specific part, this is done for better understanding and what ouput do we get. (Of course this could be done with gdb, but I tried this way because wasn't much familiar with gdb functionality yet).  
+After inserting the __**STRING**__ as an input to my code, I got the return of the function "-10" :O , whaaaaaa? 
+
+<img width="467" alt="Screen Shot 2022-05-17 at 15 46 02" src="https://user-images.githubusercontent.com/24619999/169329869-7a123b14-f6ca-4a64-b5af-b0654bd40d2e.png">
+
+Then I have started to look at ascii codes, it didn't help much, but I tried to input tab at the end of the __**STRING**__, then tried "\0", but the return value wasn't "0", after some research __**BINGO**__, it was all about the "Enter", the "Enter" was interpreted as "\n" in the char of array, so we needed to have the EOT, which creates EOF condition for our input, the EOT we could have if after inputting the string we inputted CTRL+D, not "Enter. And BOOM, we got it.  
+  
+<img width="464" alt="Screen Shot 2022-05-17 at 15 46 33" src="https://user-images.githubusercontent.com/24619999/169333082-dc32ebd5-2ff8-4601-8196-cb129173ed91.png">
 
 You can use the [editor on GitHub](https://github.com/PizzaPablo666/Writeups-CyberApo22/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
