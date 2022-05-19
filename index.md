@@ -30,6 +30,11 @@ $ strings <filename>
 ```
 For out file:  
  <img width="390" alt="Screen Shot 2022-05-17 at 15 43 18" src="https://user-images.githubusercontent.com/24619999/169318761-ef0056cf-2269-4f95-b4d5-dc2f46e5e096.png">
+ 
+We see that the command outputs really interesting and valuable information from the executable.  
+<img width="635" alt="Screen Shot 2022-05-17 at 15 43 40" src="https://user-images.githubusercontent.com/24619999/169323256-1b99c52d-7e6e-43c4-b3b5-59b9fb82d12c.png">
+
+We can see some string, which (we hope) is not misleading. 
 
 You can use the [editor on GitHub](https://github.com/PizzaPablo666/Writeups-CyberApo22/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
