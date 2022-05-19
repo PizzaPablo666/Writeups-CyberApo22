@@ -9,7 +9,17 @@ $ nc <ip> <port>
 $ telnet <ip> <port>
 ```
 After connecting we can see this banner :O 
+  
 <img width="722" alt="Screen Shot 2022-05-17 at 15 42 14" src="https://user-images.githubusercontent.com/24619999/169314379-0f36db24-a22e-4579-9cf3-df98426cb732.png">
+
+In the banner there is an interesting monitor/laptop in which it is said there is a "goldenfang" user which changed secret_pass.txt name to flag.txt. 
+And we got 3 options.
+1. Disable mechanisms 
+2. Login
+3. Exit 
+
+We totally don't want to exit, so we will go ahread with the first two. 
+<img width="354" alt="Screen Shot 2022-05-17 at 15 42 55" src="https://user-images.githubusercontent.com/24619999/169315995-5c9bd182-b35f-498f-a76a-01407652e74c.png">
 
 
 You can use the [editor on GitHub](https://github.com/PizzaPablo666/Writeups-CyberApo22/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
