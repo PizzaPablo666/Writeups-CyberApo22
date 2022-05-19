@@ -40,7 +40,12 @@ So we need to __**GO DEEPER**__.
 For going deeper we need to disassemble the executable and decompile it (to see the C code). I have used Ghidra for this, IDA is also cool for this kind of stuff. 
 By loading the file and analyzing it, I have found a function called admin_panel in the executable. Let's see in details.  
 
-<img width="751" alt="Screen Shot 2022-05-17 at 15 44 35" src="https://user-images.githubusercontent.com/24619999/169325626-8b012aa3-ffee-47df-a120-c3110d831c99.png">
+<img width="751" alt="Screen Shot 2022-05-17 at 15 44 35" src="https://user-images.githubusercontent.com/24619999/169325626-8b012aa3-ffee-47df-a120-c3110d831c99.png">  
+
+Let's understand what is written in the code. 
+So we have a function called admin_panel, which gets 3 parameters (the params are 1, 2, 3 for disaplaying the options). The function has a local_38 char array with 40 bytes. In the line 10 it prints the below part of the banner with the options using the params. Then we have a while loop which forces us to input 1 2 or 3, and if we input 1 or 2 (doesn't matter), then the input goes to the same variable local_38. In the line 27 we can see that from our input 57 bytes can be read, but our local_38 variable is 40 byte array, the fun part is that this doesn't matter :DDD  
+In the line 28 we can see an if statement which compares the params, we can't change params anyway because they are consts, so we go ahead, and here we gooooo 3:)  
+In the line 29 we have strncmp function, which compares the two strings until the mentioned number (3rd param) and outputs the difference of the first different char, or if they are equal returns "0". 
 
 
 You can use the [editor on GitHub](https://github.com/PizzaPablo666/Writeups-CyberApo22/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
