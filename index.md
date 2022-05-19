@@ -34,7 +34,14 @@ For out file:
 We see that the command outputs really interesting and valuable information from the executable.  
 <img width="635" alt="Screen Shot 2022-05-17 at 15 43 40" src="https://user-images.githubusercontent.com/24619999/169323256-1b99c52d-7e6e-43c4-b3b5-59b9fb82d12c.png">
 
-We can see some string, which (we hope) is not misleading. 
+We can see some string, which (we hope) is not misleading.
+After trying to input that string "DRAEGER15th30n34nd0nly4dm1n15tr4t0R0fth15sp4c3cr4ft" the answer was the same "Auth fail!" , connection termination. 
+So we need to __**GO DEEPER**__.
+For going deeper we need to disassemble the executable and decompile it (to see the C code). I have used Ghidra for this, IDA is also cool for this kind of stuff. 
+By loading the file and analyzing it, I have found a function called admin_panel in the executable. Let's see in details.  
+
+<img width="751" alt="Screen Shot 2022-05-17 at 15 44 35" src="https://user-images.githubusercontent.com/24619999/169325626-8b012aa3-ffee-47df-a120-c3110d831c99.png">
+
 
 You can use the [editor on GitHub](https://github.com/PizzaPablo666/Writeups-CyberApo22/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
