@@ -59,40 +59,11 @@ After inserting the __**STRING**__ as an input to my code, I got the return of t
 
 Then I have started to look at ascii codes, it didn't help much, but I tried to input tab at the end of the __**STRING**__, then tried "\0", but the return value wasn't "0", after some research __**BINGO**__, it was all about the "Enter", the "Enter" was interpreted as "\n" in the char of array, so we needed to have the EOT, which creates EOF condition for our input, the EOT we could have if after inputting the string we inputted CTRL+D, not "Enter. And BOOM, we got it.  
   
-<img width="464" alt="Screen Shot 2022-05-17 at 15 46 33" src="https://user-images.githubusercontent.com/24619999/169333082-dc32ebd5-2ff8-4601-8196-cb129173ed91.png">
-
-You can use the [editor on GitHub](https://github.com/PizzaPablo666/Writeups-CyberApo22/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/PizzaPablo666/Writeups-CyberApo22/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<img width="464" alt="Screen Shot 2022-05-17 at 15 46 33" src="https://user-images.githubusercontent.com/24619999/169333082-dc32ebd5-2ff8-4601-8196-cb129173ed91.png">  
+  
+First I have tried it in my local environment. And it work!  
+  
+<img width="562" alt="Screen Shot 2022-05-17 at 15 46 56" src="https://user-images.githubusercontent.com/24619999/169333752-5f096f95-5d66-4169-bf50-5abea2c01662.png">  
+  
+After this tried in the remote env, and yeey we got the flag. 
+<img width="744" alt="Screen Shot 2022-05-17 at 16 03 47" src="https://user-images.githubusercontent.com/24619999/169334655-77068a8f-3a5a-412d-b2eb-a198abb9ec11.png">
